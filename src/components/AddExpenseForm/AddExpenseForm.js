@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Card from '../UI/Card'
 import './AddExpenseForm.css'
 
-const AddExpenseForm = () => {
+const AddExpenseForm = (props) => {
 
 
     const [enteredTitle, setEnteredTitle] = useState('')
@@ -28,10 +28,11 @@ const AddExpenseForm = () => {
         const newExpense = {
             title: enteredTitle,
             amount: +enteredAmount,
-            date: enteredDate
+            date: enteredDate,
+            id: Math.random().toString()
         }
 
-        console.log(newExpense)
+        props.onAddExpense(newExpense)
 
         setEnteredTitle('')
         setEnteredAmount('')
