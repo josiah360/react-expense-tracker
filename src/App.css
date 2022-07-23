@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #333;
     margin: 0;
@@ -8,6 +12,10 @@ body {
 
 .container {
     width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
 }
 
 @media (min-width: 768px) {

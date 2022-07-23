@@ -2,10 +2,10 @@ import Card from "../UI/Card"
 import ExpensesList from "./ExpensesList"
 import './ExpensesContainer.css'
 
-const ExpensesContainer = () => {
+const ExpensesContainer = (props) => {
     return (
         <Card className="expenses-container">
-            <ExpensesList />
+            <ExpensesList expenses={props.expenses} />
         </Card>
     )
 }

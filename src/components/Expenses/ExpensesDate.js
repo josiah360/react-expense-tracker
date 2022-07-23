@@ -1,11 +1,11 @@
 import './ExpensesDate.css'
 
-const ExpensesDate = () => {
+const ExpensesDate = (props) => {
     return (
         <div className="date">
-            <span className="month">March</span>
-            <span className="year">2021</span>
-            <span className="day">12</span>
+            <span className="month">{ new Date(props.date).toLocaleString('en-US', {month: 'long'}) }</span>
+            <span className="year">{ new Date(props.date).toLocaleString('en-US', {year: 'numeric'}) }</span>
+            <span className="day">{ new Date(props.date).toLocaleString('en-US', {day: '2-digit'}) }</span>
         </div>
     )
 }

@@ -1,12 +1,12 @@
 import ExpensesDate from './ExpensesDate'
 import './Expense.css'
 
-const Expense = () => {
+const Expense = (props) => {
     return (
         <li className="expense">
-            <ExpensesDate />
-            <h2 className="title">New Car</h2>
-            <div className="amount">$22.5</div>
+            <ExpensesDate date={props.date} />
+            <h2 className="title">{props.title}</h2>
+            <div className="amount">{`$${props.amount.toFixed(2)}`}</div>
         </li>
     )
 }
