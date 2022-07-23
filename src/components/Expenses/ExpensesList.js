@@ -2,8 +2,13 @@ import Expense from "./Expense"
 import './ExpensesList.css'
 
 const ExpensesList = (props) => {
+
+    const filteredExpenses = props.expenses.filter(expense => new Date(expense.date).getFullYear() === +props.filterValue);
+    let renderSwitch = <h2>No expense found.</h2>
+
     return <ul className="expenses-list">
-        {props.expenses.map(expense => 
+        {filteredExpenses.length === 0 && renderSwitch}
+        {filteredExpenses.length > 0 && filteredExpenses.map(expense => 
             <Expense 
                 key={expense.id}
                 id={expense.id}
@@ -12,7 +17,6 @@ const ExpensesList = (props) => {
                 date={expense.date}
             />
         )}
-
     </ul>
 }
 

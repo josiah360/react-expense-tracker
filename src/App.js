@@ -6,10 +6,10 @@ import './App.css'
 
 
 const DUMMY_EXPENSES = [
-  {title: 'New Car', amount: 2.22, date: "2015-03-25", id: 'e1'},
-  {title: 'Grossary', amount: 5.00, date: "2015-03-25", id:'e2'},
-  {title: 'Home Maintenance', amount: 2.45, date: "2015-03-25", id:'e3'},
-  {title: 'Transport', amount: 6.65, date: "2015-03-25", id:'e4'},
+  {title: 'New Car', amount: 2.22, date: "2020-03-25", id: 'e1'},
+  {title: 'Grossary', amount: 5.00, date: "2021-03-25", id:'e2'},
+  {title: 'Home Maintenance', amount: 2.45, date: "2020-03-25", id:'e3'},
+  {title: 'Transport', amount: 6.65, date: "2022-03-25", id:'e4'},
 ]
 
 
@@ -18,7 +18,7 @@ function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES)
 
   const addExpenseHandler = (newExpense) => {
-    setExpenses([newExpense, ...expenses])
+    setExpenses((prevExpenses) => [newExpense, ...prevExpenses])
   }
 
   return (
