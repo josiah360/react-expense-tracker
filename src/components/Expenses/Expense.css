@@ -1,0 +1,23 @@
+.expense {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+    background-color: #333;
+    padding: .7em;
+    border-radius: 6px;
+}
+
+.title {
+    color: white;
+    font-size: 1.2em;
+}
+
+.amount {
+    margin-left: auto;
+    background-color: rgb(73, 21, 122);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: .5em 1.2em;
+    border: 1px solid rgb(200, 154, 243);
+}
