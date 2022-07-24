@@ -1,9 +1,9 @@
 import './AddNewExpense.css'
 
-const AddNewExpense = () => {
+const AddNewExpense = (props) => {
     return (
         <div className='add-new-expense'>
-            <button>Add New Expense</button>
+            <button onClick={props.openForm}>Add New Expense</button>
         </div>
     )
 }
