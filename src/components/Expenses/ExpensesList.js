@@ -1,4 +1,5 @@
 import Expense from "./Expense"
+import ExpenseChart from "./ExpenseChart"
 import './ExpensesList.css'
 
 const ExpensesList = (props) => {
@@ -7,6 +8,8 @@ const ExpensesList = (props) => {
     let renderSwitch = <h2>No expense found.</h2>
 
     return <ul className="expenses-list">
+        <ExpenseChart filteredData={filteredExpenses} />
+
         {filteredExpenses.length === 0 && renderSwitch}
         {filteredExpenses.length > 0 && filteredExpenses.map(expense => 
             <Expense 
