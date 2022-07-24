@@ -1,0 +1,25 @@
+.add-new-expense {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.add-new-expense button {
+    padding: .6em 1em;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(39, 18, 58);
+    color: white;
+}
+
+.add-new-expense button:focus {
+    outline: none;
+}
+
+.add-new-expense button:active {
+   transform: scale(0.98)
+}
